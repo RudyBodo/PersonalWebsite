@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div id="grey">
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+
+				</div>
+
+	    </div> <!-- /container -->
+			</div><!-- /row -->
+	</div>
+	<div id="white">
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+				{% for post in blog %}
+						<li><a href="/blog/{{post.id}}">{{post.title}}</a></li>
+				{% endfor %}
+				{% if no_id %}
+					<h1><center>{{no_id}}</center></h1>
+				{% endif %}
+				</div>
+	    	</div>
+		</div>
+	</div>
+{% endblock %}

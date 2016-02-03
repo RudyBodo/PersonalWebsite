@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+
+	<!-- +++++ Projects Section +++++ -->
+
+	<div class="container pt">
+		<div class="row mt">
+			<div class="col-lg-6 col-lg-offset-3 centered">
+				<h3>Gallery</h3>
+				<hr>
+				<p>Iam sorry, maybe some pictures below too handsome </p>
+			</div>
+		</div>
+		<div class="row mt centered">
+{% for fotos in foto %}
+			<div class="col-lg-4">
+				<img class="img-responsive" src="/static/img/gallery/{{fotos.name}}">
+			</div>
+{% endfor %}
+		</div><!-- /row -->
+	</div><!-- /container -->
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- +++++ post Section +++++ -->
+<div id="white">
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<p><img src="{{url_for('.static', filename= 'img/user.png')}}" width="50px" height="50px"> <ba>{{personal_information.fullname}}</ba></p>
+					<p><bd>{{blog.created}}</bd></p>
+					<h4>{{blog.title}}</h4>
+					<p>{{blog.content}}</p>
+					<br>
+					<p><bt>TAGS: <a href="/blog/category/{{blog.id_category}}">{{blog.category}}</a> </bt></p>
+				</div>
+			</div>
+	    </div>
+	</div>
+<!-- +++++ end post +++++ -->
+{% endblock %}
